@@ -103,12 +103,3 @@ Odd-Event Sort 的實作方式，數值交換會分成 Even Phase & Odd Phase，
 在優化的時候其實想過很多問題，從一開始簡單的把 loop 中沒必要的計算移出來以及 Function 中的變數宣告能提到面的都提到外面，到最後思考新的 Communication Protocol，一步一步慢慢把時間縮短然後 Scoreboard 名次漸漸往上的感覺真的很爽。
 
 不過這次優化有個問題，我為了 Performance 的緣故在幾個地方跟原本之前寫 Code 的習慣有巨大的差距。第一個是 Memory 的問題，因為這次的 Tradeoff 是越快越好，所以 Memory 就開的非常的大；第二個是為了減少 Function 或 Loop 中的 Variable Declaration，我把一些 Variable 提到 Global 宣告，讓這份程式碼的 Coding Style 有點差。
-
-<style>
-table td {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-</style>
