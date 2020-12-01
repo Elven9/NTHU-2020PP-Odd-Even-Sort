@@ -72,16 +72,9 @@ Odd-Event Sort 的實作方式，數值交換會分成 Even Phase & Odd Phase，
 
 ### Strong Scalability
 
-<div style="display:flex; flex-direction: row">
-  <figure class="image">
-    <img src="./img/Single%20Node%20Strong%20Scalability.png" alt="Single Node Strong Scalability">
-    <figcaption>圖2, 單 Node 不同 Process 數量所畫出來的圖</figcaption>
-  </figure>
-  <figure class="image">
-    <img src="./img/Multiple%20Node%20Strong%20Scalability.png" alt="Multiple Node Strong Scalability">
-    <figcaption>圖3, 多個 Node，每個 Node 有 8 個 Process</figcaption>
-  </figure>
-</div>
+| | |
+| ---- | ---- |
+|![Single Node Strong Scalability](./img/Single%20Node%20Strong%20Scalability.png)*圖2, 單 Node 不同 Process 數量所畫出來的圖*  | ![Multiple Node Strong Scalability](./img/Multiple%20Node%20Strong%20Scalability.png)*圖3, 多個 Node，每個 Node 有 8 個 Process*|
 
 圖 2 是以單 Node，從 1 個 Process 到 12 個 Process 當作 x 軸製程的 Strong Scalability 圖。會只使用單個 Node 的原因是我想減少 Network Interference 所造成的影響，雖然沒辦法避開進到 OS Network Stack 的問題但至少沒有經過網路線路。
 
@@ -91,16 +84,9 @@ Odd-Event Sort 的實作方式，數值交換會分成 Even Phase & Odd Phase，
 
 ### 各個種類時間花費佔比 Time Profile
 
-<div style="display:flex; flex-direction: row">
-  <figure class="image">
-    <img src="./img/Single%20Node%20Time%20Profile.png" alt="Single Node Time Profile">
-    <figcaption>圖 4, 單 Node，12 個 Process 不同比較</figcaption>
-  </figure>
-  <figure class="image">
-    <img src="./img/Mutiple%20Node%20Time%20Profile.png" alt="Multiple Node Time Profile">
-    <figcaption>圖 5, 不同 Node 數，每個 Node 有 8 個 Process 比較</figcaption>
-  </figure>
-</div>
+| | |
+| --- | --- |
+| ![](./img/Single%20Node%20Time%20Profile.png)*圖 4, 單 Node，12 個 Process 不同比較* | ![](./img/Mutiple%20Node%20Time%20Profile.png)*圖 5, 不同 Node 數，每個 Node 有 8 個 Process 比較* |
 
 圖 4 一樣是單 Node 配上 12 Core 的處理，可以很明顯看到 Sequencial Version 花最多的時間在 Preprocessing Data 上（也就包含 Sort 所花的時間），而當今天有 12 個 Core 在執行 Sorting 時各個 Node 分配到的 Data 數量就會減少，佔用時間也就大量減少。
 
